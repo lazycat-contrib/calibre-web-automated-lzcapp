@@ -1,0 +1,21 @@
+params:
+  - id: login_user
+    type: string
+    name: "Login User"
+    description: "Initial web UI username (default admin is overridden by this value)"
+    default_value: "admin"
+    optional: true
+  - id: login_password
+    type: secret
+    name: "Login Password"
+    description: "Initial web UI password; change it after first login in app settings"
+    default_value: "$random(len=20)"
+    optional: true
+locales:
+  zh:
+    login_user:
+      name: "登录用户名"
+      description: "Web 界面初始用户名，默认 admin"
+    login_password:
+      name: "登录密码"
+      description: "Web 界面初始密码；首次登录后请在应用设置中修改"

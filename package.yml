@@ -1,0 +1,18 @@
+package: community.lazycat.app.calibre-web-automated
+version: 4.0.8
+name: Calibre-Web-Automated
+description: Self-hosted ebook library manager with automatic conversion, ingest and Calibre database compatibility.
+min_os_version: "1.5.0"
+homepage: https://github.com/crocodilestick/Calibre-Web-Automated
+author: crocodilestick
+license: GPL-3.0
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: Calibre-Web-Automated
+    description: 电子书库管理器，支持自动格式转换、入库目录与 Calibre 数据库兼容。
+  en:
+    name: Calibre-Web-Automated
+    description: Self-hosted ebook library manager with automatic conversion, ingest and Calibre database compatibility.
