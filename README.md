@@ -1,16 +1,15 @@
 # Calibre-Web-Automated for LazyCat
 
-- Upstream https://github.com/crocodilestick/Calibre-Web-Automated, version 4.0.8, GPL-3.0.
-- Package `community.lazycat.app.calibre-web-automated`, Linux amd64, minimum LazyCat OS 1.5.0.
-- Image `docker.io/crocodilestick/calibre-web-automated:v4.0.8` mirrored via `docker.1ms.run` with required digest matching.
-- Port 8083. Persistent paths: `/config`, `/cwa-book-ingest`, `/calibre-library`. PUID/PGID 1000.
-
-## Credentials
-
-Upstream ships a well-known default admin password (`admin123`), documented in its README. This package does not ship that credential to users: deployment parameters generate a random 20-character initial password at install time, and the login page is autofilled from those parameters. Users should change the password after first login. The application stays behind LazyCat authentication with no public-path exemption.
+Calibre-Web-Automated v4.0.8 packaged as a LazyCat LPK (community store).
 
 ## Publication
 
-Reusable LazyCat workflow with versioned Release assets. Automatic private and official publishers stay disabled; only the independently verified Release URL/SHA256 is submitted to MiaoMiao community store after full alias/package/source duplicate checks.
+MiaoMiao community store app 664, APPROVED, version 4.0.8. LPK built by reusable LazyCat workflow (run 41084706487) with mirror delivery verification for `crocodilestick/calibre-web-automated:v4.0.8`. SHA256 `a79cafe8870c9eb0088130fff223527f333c64aeb9c5692a8322032fe9302a5d` recorded by the store at submission.
 
-No file-chooser interceptor, smoke job or runtime gate. Configuration/workflow checks, mirror verification and LPK SHA256 do not establish device startup, library initialization, format conversion or automatic ingest. Those runtime behaviors remain unverified.
+Configuration-only checks passed; no device startup, library init, format conversion or ingest verification.
+
+## Notes
+
+- Login page uses simple-inject-password autofill (no auto-submit); deploy params provide initial credentials.
+- `/calibre-library` is the Calibre library (auto-created on first run), `/cwa-book-ingest` the ingest directory, `/config` app config.
+- Fixed manifest YAML quoting bug (passwordSelector nested quotes) found before submission.
